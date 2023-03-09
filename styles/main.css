@@ -1,0 +1,403 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  * margin: 0; *
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+
+:root {
+  --color-font: rgb(38, 38, 38);
+  --color-primary: #4229e8;      
+  --color-secondary: #d079c9;   
+  --color-accent: #f36a1b;       
+  --color-accent-light: #f1cfb0;
+  background-color: #f1cfb0;
+  cursor: url(favicon.ico);
+  cursor: url(images/CURSOR.png);
+}
+main {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+body {
+  font-family: 'VT323', monospace;
+  color: var(--color-font);
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a[href]:hover {
+  color: var(--color-font);
+}
+.customcursor {
+    cursor: url(styles/CURSOR.png), auto;
+    /* width: 3rem;
+    height: 3rem;
+    position: fixed;
+    opacity: 0;
+     pointer-events: none;
+      mix-blend-mode: difference;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      transition: transform 350ms ease;
+      transform: translate(-50%, -50%) scale(.3);
+      z-index: 1000; */
+    }
+    .custom-cursor--link {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+header ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  background-color: var(--color-primary);
+}
+
+.hero {
+position: relative;
+display: flexbox;
+}
+.hero .text-wrapper {
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  padding: 5vh;
+}
+h1 {
+  font-family: 'VT323', monospace;
+  color:var(--color-font);
+  font-weight: 200;
+  font-size: clamp(7rem, 12vw + 1rem, 10rem);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-shadow: 2px 2px #e82929, 4px 4px orange, 6px 6px rgb(255, 230, 0), 8px 8px green, 10px 10px blue, 12px 12px purple, 14px 14px pink, 2px 2px #e82929, 16px 16px orange, 18px 18px rgb(255, 230, 0), 20px 20px green, 22px 22px blue, 24px 24px purple, 26px 26px pink;
+  text-transform: none;
+}
+h2 {
+  font-family: 'DM Serif Display', serif;
+  color:var(--color-font);
+  font-weight: 200;
+  font-size: 3rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  text-shadow: 1px 1px #e82929, -1px -1px orangered;
+  display: flexbox;
+  text-align: center;
+  padding: 1vh;
+}
+
+p {
+  font-weight: 200;
+  font-size: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-shadow: 1px 1px #f31b1b;
+  display: flexbox;
+  text-align: center;
+  padding: 1vh;
+}
+h3 {
+  font-family: 'DM Serif Display', serif;
+  color:var(--color-font);
+  font-weight: 200;
+  font-size: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flexbox;
+  text-shadow: 1px 1px #e82929, -1px -1px orange;
+  text-transform: none;
+  text-align: center;
+  padding: 1vh;
+  line-height: 10vh;
+}
+/* h4 {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  user-select: none;
+  flex: 2 0 auto;
+  border: 4px ridge #d8d8d8;
+} */
+
+.button {
+  font-family: 'VT323', monospace;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  padding: 15px 30px;
+  margin: 0 1rem 1rem;
+  color: rgb(0, 0, 6);
+  border: 2px solid rgb(0, 0, 1);
+  transition: color 1s cubic-bezier(0.25, 1, 0.25, 1),
+  background-color 1s cubic-bezier(0.25, 1, 0.25, 1);
+  margin-top: 2vh;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: red;
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom center;
+}
+
+.button  span {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 2.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover span {
+  color: #000;
+}
+
+.img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+aside h3 {
+  font-style: italic;
+}
+
+.animation span {
+  color: #f60202;
+  text-shadow: textShadow(0.25, 6, #0e02f5);
+  position: relative;
+  animation: scatter 1.75s infinite;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  animation: none;
+}
+.animation span:nth-child(2n) {
+  color: #0233f5;
+  text-shadow: textShadow(0.25, 6, #0703f5);
+  animation-delay: 0.3s;
+}
+.animation span:nth-child(3n) {
+  color: #13ff1f;
+  text-shadow: textShadow(0.25, 6, #f60d0d);
+  animation-delay: 0.15s;
+}
+
+.animation span:nth-child(5n) {
+  color: #f71515;
+  text-shadow: textShadow(0.25, 6, #E485F8);
+  animation-delay: 0.4s;
+}
+
+.animation span:nth-child(7n), .playful span:nth-child(11n) {
+  color: #fa0d0d;
+  text-shadow: textShadow(0.25, 6, #FF5555);
+  animation-delay: 0.25s;
+}
+
+@keyframes scatter {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 200vh;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.show-box-layout {
+  display: flex;
+}
+
+
+.show-box h2 {
+  font-family: 'VT323', monospace;
+  border: 4px ridge #d8d8d8;
+}
+
+
+.show-box.one {
+  height: 80vh;
+  width: 30vw;
+  height: 80vh;
+  top: 14vh;
+  left: 15vw;
+}
+
+.show-box.two {
+  height: 80vh;
+  width: 30vw;
+  top: 30vh;
+  left: 55vw;
+}
+
+.show-box.three {
+  height: 40vh;
+  width: 40vw;
+  right: 50vw;
+  top: 10vh;
+}
+
+.show-box header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgb(165, 51, 150), rgb(240, 121, 212));
+  padding: 4px;
+}
+
+.show-box h2 {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  user-select: none;
+  flex: 2 0 auto;
+}
+
+.show-box .window-icons {
+  display: flex;
+}
+
+.window-icons svg {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 3px;
+  border: 1px outset #dad7d2;
+  cursor: pointer;
+}
+
+.lookbox {
+  height: 90vh;
+  max-width: 80vw;
+  min-width: 30vw;
+  width: 100%;
+  user-select: none;
+  overflow-y: scroll;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-scroll .lookbox {
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
