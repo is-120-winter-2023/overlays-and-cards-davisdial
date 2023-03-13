@@ -35,7 +35,7 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
+  display: flexbox;
   max-width: 100%;
   height: auto;
 }
@@ -91,8 +91,7 @@ img[src$="svg"] {
   --color-primary: #4229e8;      
   --color-secondary: #d079c9;   
   --color-accent: #f36a1b;       
-  --color-accent-light: #f1cfb0;
-  background-color: #f1cfb0;
+  /* --color-accent-light: #f1cfb0; */
   cursor: url(favicon.ico);
   cursor: url(images/CURSOR.png);
 }
@@ -103,7 +102,12 @@ main {
 body {
   font-family: 'VT323', monospace;
   color: var(--color-font);
-}
+    background: linear-gradient(-45deg, #e8ecbd, #b374ea, #b2e4fe, #f39ede);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -138,7 +142,10 @@ header ul {
   padding: 0;
 }
 footer {
-  background-color: var(--color-primary);
+  background: linear-gradient(-45deg, #000000, #ff0062, #000000, #00ff1a);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
 }
 
 .hero {
@@ -357,13 +364,14 @@ img {
 .show-box header {
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg, rgb(165, 51, 150), rgb(240, 121, 212));
+  background: linear-gradient(90deg, rgb(64, 242, 55), rgb(129, 240, 121));
+  animation: gradient 15s ease infinite;
   padding: 4px;
 }
 
 .show-box h2 {
   font-size: 1rem;
-  color: #fff;
+  color: rgb(0, 0, 0);
   margin: 0;
   user-select: none;
   flex: 2 0 auto;
@@ -401,3 +409,14 @@ img {
 .hide {
   display: none;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
