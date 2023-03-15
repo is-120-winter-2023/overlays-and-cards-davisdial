@@ -102,10 +102,11 @@ main {
 body {
   font-family: 'VT323', monospace;
   color: var(--color-font);
-    background: linear-gradient(-45deg, #e8ecbd, #b374ea, #b2e4fe, #f39ede);
+  /* background: radial-gradient(217deg, rgb(255, 0, 0), rgba(0, 30, 255, 0.277) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(187, 0, 255, 0.394) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgb(255, 64, 0) 70.71%); */
+    background: linear-gradient(-45deg, #d9ff00, #0000ff, #00ff5e, #00d9ff,rgb(55, 55, 183),rgb(255, 166, 1),rgb(255, 0, 221));
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
+    animation: gradient 10s ease infinite;
+    height: 10vh;
   }
   
 a {
@@ -117,19 +118,6 @@ a[href]:hover {
 }
 .customcursor {
     cursor: url(styles/CURSOR.png), auto;
-    /* width: 3rem;
-    height: 3rem;
-    position: fixed;
-    opacity: 0;
-     pointer-events: none;
-      mix-blend-mode: difference;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: white;
-      transition: transform 350ms ease;
-      transform: translate(-50%, -50%) scale(.3);
-      z-index: 1000; */
     }
     .custom-cursor--link {
       transform: translate(-50%, -50%) scale(1);
@@ -142,10 +130,11 @@ header ul {
   padding: 0;
 }
 footer {
-  background: linear-gradient(-45deg, #000000, #ff0062, #000000, #00ff1a);
+    /* background: linear-gradient(-45deg, #000000, #48ff00, #000000, #00ff1a); */
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 100vh;
+    height: 40vh;
 }
 
 .hero {
@@ -176,7 +165,7 @@ h2 {
   font-size: 3rem;
   margin-left: 6rem;
   margin-right: 6rem;
-  text-shadow: 1px 1px #e82929, -1px -1px orangered;
+  text-shadow: 1px 1px #e82929, -1px -1px rgb(0, 255, 21);
   display: flexbox;
   text-align: center;
   padding: 1vh;
@@ -200,7 +189,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   display: flexbox;
-  text-shadow: 1px 1px #e82929, -1px -1px orange;
+  text-shadow: 1px 1px #e82929, -1px -1px rgb(0, 255, 21);
   text-transform: none;
   text-align: center;
   padding: 1vh;
@@ -234,7 +223,8 @@ h3 {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: red;
+  /* background-color: red; */
+  background: radial-gradient(rgb(255, 77, 0),rgb(255, 0, 0));
   transform-origin: top center;
   transform: scaleY(0);
   transition: transform 2.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -409,6 +399,66 @@ img {
 .hide {
   display: none;
 }
+
+
+.rotating-text {
+  font-family: 'VT323', monospace;
+  font-weight: 600;
+  font-size: 36px;
+  color: white;
+  transform: translateX(-80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  
+}
+  p {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+  }
+    .word {
+      position: absolute;
+      display: flex;
+      opacity: 0;
+    }
+      .letter {
+        transform-origin: center center 25px;
+      }
+        &.out {
+          transform: rotateX(90deg);
+          transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+        }
+        &.in {
+          transition: 0.38s ease;
+        }
+        &.behind {
+          transform: rotateX(-90deg);
+        }
+
+
+.alizarin {
+  color: #e74c3c;
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.peter-river {
+  color: #3498db;
+}
+
+.emerald {
+  color: #2ecc71;
+}
+
+.sun-flower {
+  color: #f1c40f;
+}
+
+
 
 @keyframes gradient {
   0% {
