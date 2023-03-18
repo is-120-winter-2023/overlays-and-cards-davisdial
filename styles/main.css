@@ -100,10 +100,10 @@ main {
 body {
   font-family: 'VT323', monospace;
   color: var(--color-font);
-  /* background: radial-gradient(217deg, rgb(255, 0, 0), rgba(0, 30, 255, 0.277) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(187, 0, 255, 0.394) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgb(255, 64, 0) 70.71%); */
     background: linear-gradient(-45deg, #d9ff00, #0000ff, #00ff5e, #00d9ff,rgb(55, 55, 183),rgb(255, 166, 1),rgb(255, 0, 221));
     background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 20s linear infinite;
+    animation-direction: alternate;
     height: 10vh;
     cursor: url(window-cursor.png), auto; 
   }
@@ -129,7 +129,6 @@ header ul {
   padding: 0;
 }
 footer {
-    /* background: linear-gradient(-45deg, #000000, #48ff00, #000000, #00ff1a); */
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -304,6 +303,11 @@ aside h3 {
   }
 }
 
+@keyframes gradient {
+  0% {background-position: 0%}
+  100% {background-position: 100%}
+}
+
 
 * {
   box-sizing: border-box;
@@ -336,6 +340,8 @@ img {
   top: 14vh;
   left: 15vw;
 }
+
+
 
 .show-box.two {
   height: 80vh;
